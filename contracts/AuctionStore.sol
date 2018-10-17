@@ -40,7 +40,7 @@ contract AuctionStore {
     constructor ()public{
         productIndex = 0;
     }
-    //添加产品到商店
+    //添加产品到区块链中
     function addProductToStore(string _name, string _category, string _imageLink, string _descLink, uint _auctionStartTime, uint _auctionEndTime ,uint _startPrice, uint  _productCondition) public  {
         //开始时间需要小于结束时间
         require(_auctionStartTime < _auctionEndTime,"开始时间不能晚于结束时间");
