@@ -87,7 +87,7 @@ contract AuctionStore {
         //确保当前时间大于投标结束时间
         require(now > product.auctionEndTime,"当前时间不能早于竞标结束时间");
         // 对竞标价格与关键字密钥进行加密
-        bytes32 sealedBid = sha3(_amount, _secret);
+        bytes32 sealedBid = keccak256(_amount, _secret);
         //获取投标人信息
         Bid memory bidInfo = product.bids[msg.sender][sealedBid];
         //判断是否存在钱包地址，钱包地址0x4333  uint160的钱包类型
