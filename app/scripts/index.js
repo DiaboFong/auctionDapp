@@ -1,4 +1,4 @@
-import "../stylesheets/app.css";
+import "../styles/app.css";
 
 import {
   default as Web3
